@@ -5,13 +5,13 @@ To set up an environment and run scripts you should have:
 3. Installed and working PostgreSQL 10 server.
 
 Then you should:
-1.Open in console directory with this repository.
-2.Write in console "virtualenv venv", to create virtual environment.
-3.Open venv by comand "source venv/bin/activate" in Linux or "source venv/Scripts/activate" in Windows.
-4.Download all dependencies by command  "pip install -r requirements.txt".
-5.Go to the .env file in that directory and write "DB_CREDENTIALS=dialect+driver://username:password@host:port/database".
-  Driver, username, username, host, port, database - is information about postges server. 
-  It should looks like this - "DB_CREDENTIALS=postgresql://scott:tiger@localhost:5432/mydatabase". Then save this file.
+1. Open in console directory with this repository.
+2. Write in console "virtualenv venv", to create virtual environment.
+3. Open venv by comand "source venv/bin/activate" in Linux or "source venv/Scripts/activate" in Windows.
+4. Download all dependencies by command  "pip install -r requirements.txt".
+5. Go to the .env file in that directory and write "DB_CREDENTIALS=dialect+driver://username:password@host:port/database".
+   Driver, username, username, host, port, database - is information about postges server. 
+   It should looks like this - "DB_CREDENTIALS=postgresql://scott:tiger@localhost:5432/mydatabase". Then save this file.
  
  It's all about the environment.
  
