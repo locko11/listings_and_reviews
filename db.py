@@ -24,8 +24,8 @@ class DBCOntroller:
     def create_table_from_csv(self, csv_path, table_name):
         try:
             with open(csv_path, newline='', encoding='utf-8') as csvfile:
-                    reader = csv.DictReader(csvfile)
-                    df = pd.DataFrame(data=reader, columns=reader.fieldnames)
+                reader = csv.DictReader(csvfile)
+                df = pd.DataFrame(data=reader, columns=reader.fieldnames)
         except Exception as e:
             print(f"Wrong csv path. Error: {e}")
             return False

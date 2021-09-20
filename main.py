@@ -1,7 +1,8 @@
-from db import DBCOntroller
-from create_db import db_builder
-from nebrhd_sugg import select_sugg, select_reviews
 from config import *
+from create_db import db_builder
+from db import DBCOntroller
+from nebrhd_sugg import select_sugg, select_reviews
+
 
 def print_names():
     print('Name of listing table. For example - "listings"')
@@ -12,11 +13,13 @@ def print_names():
     reviews_name = input()
     return listings_name, reviews_name
 
+
 def tables_constructor(db):
     while True:
         print('To create new tables fill... :')
         listings_name, reviews_name = print_names()
-        print('Path for csv file with information for reviews. For example - "C:/Users/User/Desktop/csvs/reviews_detailed.csv".' \
+        print(
+            'Path for csv file with information for reviews. For example - "C:/Users/User/Desktop/csvs/reviews_detailed.csv".' \
             'Use only "/" for path separating')
         print('reviews_path:')
         reviews_path = input()
@@ -26,14 +29,16 @@ def tables_constructor(db):
         print('listing_path:')
         listing_path = input()
         continue_point = db_builder(db, listings_name=listings_name, reviews_name=reviews_name, \
-                                        reviews_path=reviews_path, listing_path=listing_path)
+                                    reviews_path=reviews_path, listing_path=listing_path)
         if continue_point:
             return listings_name, reviews_name
+
 
 def start():
     db = DBCOntroller(DB_CREDENTIALS)
     listings_name, reviews_name = '', ''
     while True:
+        print('You should choose tables for start!')
         print(f'You choose tables listings_name={listings_name} and reviews_name={reviews_name}')
         print('Choose your way: \n'
               'press 1 to select suggestions for the neighbourhood.\n'

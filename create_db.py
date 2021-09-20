@@ -1,6 +1,8 @@
-from db import DBCOntroller
 from os import path
 from pathlib import Path
+
+from db import DBCOntroller
+
 
 def check_naming(db, csv_path, table_name):
     if table_name in db.tables_name():
@@ -37,4 +39,3 @@ def db_builder(db, listing_path, reviews_path, listings_name, reviews_name):
         return True
     else:
         return False
-
