@@ -21,11 +21,13 @@ def tables_constructor(db):
         print(
             'Path for csv file with information for reviews. For example - "C:/Users/User/Desktop/csvs/reviews_detailed.csv".' \
             'Use only "/" for path separating')
+        print('Provide path to reviews_detailed.csv:')
         print('reviews_path:')
         reviews_path = input()
         print(
             'Path for csv file with information for listings. For example - "C:/Users/User/Desktop/csvs/listings.csv".' \
             'Use only "/" for path separating')
+        print('Provide path to listings.csv:')
         print('listing_path:')
         listing_path = input()
         continue_point = db_builder(db, listings_name=listings_name, reviews_name=reviews_name, \
